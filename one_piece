@@ -1,0 +1,14 @@
+mkdir ODA 
+cd ODA 
+ls 
+hadoop fs -mkdir /Luffy 
+hadoop fs -copyFromLocal /home/edureka/Desktop /Luffy 
+hadoop fs -copyFromLocal /home/edureka/Desktop/ODA /Luffy 
+hadoop fs -rmr /Luffy 
+hadoop fs -mkdir /Luffy 
+hadoop fs -copyFromLocal /home/edureka/Desktop/ODA /Luffy 
+hadoop jar hadoop-mapreduce-examples-2.2.0.jar 
+hadoop jar hadoop-mapreduce-examples-2.2.0.jar wordcount /Luffy/ODA /Luffy/Count 
+hadoop jar hadoop-mapreduce-examples-2.2.0.jar wordmean /Luffy/ODA /Luffy/Mean 
+hadoop jar hadoop-mapreduce-examples-2.2.0.jar wordmedian /Luffy/ODA /Luffy/Median 
+hadoop jar hadoop-mapreduce-examples-2.2.0.jar wordstandarddeviation /Luffy/ODA /Luffy/SD 
